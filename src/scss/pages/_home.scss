@@ -1,0 +1,53 @@
+#mobile-top {
+  padding: $gnrl-padding;
+  .top-container {
+    max-width: $gnrl-max-width;
+    margin: auto;
+    .row {
+      @include flex($justify: space-between);
+      .logo-side {
+        @include flex($align: center);
+        a {
+            display: block;
+          div {
+            width: 64px;
+            height: 64px;
+            border-radius: 12px;
+            background-color: $yellow;
+            background-image: url("../../../public/assests/icons/yelo_logo.svg");
+            background-repeat: no-repeat;
+            background-position: center;
+            margin-right: 20px;
+          }
+        }
+        
+      }
+      .center-links {
+        width: 420px;
+        ul {
+          width: 100%;
+          @include flex($justify: space-between);
+          li {
+            width: 33.33%;
+            list-style: none;
+            a{
+                text-decoration: none;
+                div{
+                    padding-left: 34px;
+                    span{
+                        font-size: 12px;
+                    }
+                    p{
+                        font-size: 16px;
+                    }
+                }
+            }
+          }
+        }
+      }
+      .btn-side {
+        color: red;
+      }
+    }
+  }
+}
