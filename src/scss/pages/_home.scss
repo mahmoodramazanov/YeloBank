@@ -1,52 +1,96 @@
 #mobile-top {
-  padding: $gnrl-padding;
+  height: 120px;
+  background-image: url("../../../public/assests/images/mobile-top.webp");
+  @include bg-image(contain, right center, no-repeat);
   .top-container {
-    max-width: $gnrl-max-width;
+    max-width: $top-max-width;
     margin: auto;
+    padding: 0 $gnrl-padding;
+    height: 100%;
     .row {
-      @include flex($justify: space-between);
+      @include flex($justify: space-between, $align: center);
+      height: 100%;
       .logo-side {
         @include flex($align: center);
         a {
-            display: block;
+          display: block;
           div {
             width: 64px;
             height: 64px;
             border-radius: 12px;
             background-color: $yellow;
             background-image: url("../../../public/assests/icons/yelo_logo.svg");
-            background-repeat: no-repeat;
-            background-position: center;
+            @include bg-image($position: center, $repeat: no-repeat);
             margin-right: 20px;
           }
         }
-        
+        p {
+          font-size: 20px;
+        }
       }
       .center-links {
         width: 420px;
+        min-width: 420px;
+        border-radius: 5px;
+        border: 1px solid rgba(0, 0, 0, 0.15);
+        margin-right: 24vw;
+        background-color: white;
         ul {
           width: 100%;
+          overflow: hidden;
           @include flex($justify: space-between);
           li {
             width: 33.33%;
+            padding: 0 2px 0 14px;
             list-style: none;
-            a{
-                text-decoration: none;
-                div{
-                    padding-left: 34px;
-                    span{
-                        font-size: 12px;
-                    }
-                    p{
-                        font-size: 16px;
-                    }
+            position: relative;
+            &::after {
+              content: "";
+              background-color: silver;
+              height: 60%;
+              width: 2px;
+              position: absolute;
+              left: -2px;
+              top: 20%;
+            }
+            a {
+              text-decoration: none;
+              div {
+                padding: 6px 0 6px 34px;
+                @include bg-image(
+                  $position: left center,
+                  $repeat: no-repeat,
+                  $size: 32px
+                );
+                span {
+                  font-size: 12px;
+                  color: $black;
                 }
+                p {
+                  font-size: 16px;
+                  color: $black;
+                }
+              }
+              .app-store {
+                background-image: url("/public/assests/icons/apple.svg");
+              }
+              .google-play {
+                background-image: url("/public/assests/icons/google_play.svg");
+              }
+              .app-gallery {
+                background-image: url("/public/assests/icons/huawei_play.svg");
+              }
             }
           }
         }
       }
       .btn-side {
-        color: red;
+        button {
+          background-color: transparent;
+          width: 52px;
+          height: 52px;
+          border-radius: 50%;
+        }
       }
     }
   }
