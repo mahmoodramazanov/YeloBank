@@ -4,12 +4,232 @@
   box-sizing: border-box;
 }
 
+body {
+  font-family: "r", Arial, sans-serif;
+}
+
+header {
+  height: 45px;
+}
+header .sect-container .header-top {
+  border-bottom: 1px solid rgba(0, 0, 0, 0.5);
+}
+header .sect-container .header-top .inner-container {
+  display: flex;
+  justify-content: space-between;
+  max-width: 1140px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+header .sect-container .header-top .inner-container nav ul {
+  display: flex;
+}
+header .sect-container .header-top .inner-container nav ul li {
+  list-style: none;
+  margin-right: 15px;
+  height: 45px;
+  padding-top: 10px;
+}
+header .sect-container .header-top .inner-container nav ul li a {
+  height: 45px;
+  padding: 10px 7px;
+  font-size: 14px;
+  text-decoration: none;
+  color: rgba(0, 0, 0, 0.5);
+  position: relative;
+}
+header .sect-container .header-top .inner-container nav ul li a:hover::after {
+  content: "";
+  width: 100%;
+  height: 3px;
+  background-color: #FFC82D;
+  position: absolute;
+  left: 0;
+  bottom: -7px;
+}
+header .sect-container .header-top .inner-container nav ul li .active {
+  color: black;
+  font-weight: bold;
+}
+header .sect-container .header-top .inner-container nav ul li .active::after {
+  content: "";
+  width: 100%;
+  height: 3px;
+  background-color: #FFC82D;
+  position: absolute;
+  left: 0;
+  bottom: -7px;
+}
+header .sect-container .header-top .inner-container .right-contacts ul {
+  display: flex;
+  font-size: 14px;
+}
+header .sect-container .header-top .inner-container .right-contacts ul li {
+  list-style: none;
+  display: flex;
+  align-items: center;
+  position: relative;
+}
+header .sect-container .header-top .inner-container .right-contacts ul li a {
+  display: flex;
+  gap: 10px;
+  text-decoration: none;
+  margin-left: 30px;
+}
+header .sect-container .header-top .inner-container .right-contacts ul li .lang-selected {
+  width: 36px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: relative;
+}
+header .sect-container .header-top .inner-container .right-contacts ul li .lang-selected i {
+  font-size: 10px;
+}
+header .sect-container .header-top .inner-container .right-contacts ul li .lang-selected:hover {
+  cursor: pointer;
+}
+header .sect-container .header-top .inner-container .right-contacts ul li .lang-options {
+  background-color: white;
+  position: absolute;
+  top: 0;
+  left: -10px;
+  border-radius: 4px;
+  box-shadow: 0 0 10px 0px rgba(0, 0, 0, 0.5);
+  display: none;
+}
+header .sect-container .header-top .inner-container .right-contacts ul li .lang-options ul {
+  display: flex;
+  flex-direction: column;
+}
+header .sect-container .header-top .inner-container .right-contacts ul li .lang-options ul li {
+  padding: 8px 20px;
+  color: rgba(0, 0, 0, 0.5);
+}
+header .sect-container .header-top .inner-container .right-contacts ul li .lang-options ul .selected {
+  color: black;
+}
+header .sect-container .header-top .inner-container .right-contacts ul li a,
+header .sect-container .header-top .inner-container .right-contacts ul li .lang-selected,
+header .sect-container .header-top .inner-container .right-contacts ul li i {
+  color: rgba(0, 0, 0, 0.5);
+}
+header .sect-container .header-top .inner-container .right-contacts ul .search-icon {
+  width: 45px;
+  height: 45px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+}
+header .sect-container .header-bottom {
+  height: 96px;
+  padding: 18px 0;
+}
+header .sect-container .header-bottom .inner-container {
+  display: flex;
+  justify-content: space-between;
+  max-width: 1140px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+header .sect-container .header-bottom .inner-container .logo-side {
+  background-color: blue;
+  padding: 10px 0;
+}
+header .sect-container .header-bottom .inner-container .logo-side a {
+  width: 144px;
+  height: 36px;
+  display: block;
+  background-image: url("/public/assests/icons/yelobank_logo.svg");
+  background-position: center;
+}
+header .sect-container .header-bottom .inner-container nav {
+  width: 100%;
+  padding: 0 40px;
+}
+header .sect-container .header-bottom .inner-container nav ul {
+  display: flex;
+  justify-content: start;
+}
+header .sect-container .header-bottom .inner-container nav ul li {
+  margin-right: 30px;
+  list-style: none;
+}
+header .sect-container .header-bottom .inner-container nav ul li a {
+  padding: 14px 0;
+  display: block;
+  position: relative;
+  text-decoration: none;
+  font-size: 17px;
+  font-weight: 500;
+  color: black;
+}
+header .sect-container .header-bottom .inner-container nav ul li a::after {
+  content: "";
+  display: block;
+  height: 3px;
+  width: 0%;
+  background: black;
+  bottom: 6px;
+  left: 0px;
+  position: absolute;
+  transition: all 0.2s;
+}
+header .sect-container .header-bottom .inner-container nav ul li a:hover::after {
+  width: 100%;
+}
+header .sect-container .header-bottom .inner-container .head-right {
+  height: 2opx;
+  display: flex;
+}
+header .sect-container .header-bottom .inner-container .head-right a {
+  display: flex;
+  gap: 10px;
+  background-color: #FFC82D;
+  height: 55px;
+  width: 175px;
+  padding: 9px 20px;
+  text-decoration: none;
+  color: black;
+  border-radius: 30px;
+  font-size: 17px;
+}
+header .sect-container .header-bottom .inner-container .head-right a i,
+header .sect-container .header-bottom .inner-container .head-right a p {
+  margin-top: 9px;
+}
+header .sect-container .header-bottom .inner-container .head-right button {
+  height: 55px;
+  width: 55px;
+  background-color: white;
+  margin-left: 10px;
+  border: 1px solid rgba(0, 0, 0, 0.5);
+  border-radius: 50%;
+  background-image: url("/public/assests/icons/menu-burger.svg");
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.fictive-mobile-top {
+  height: 120px;
+  width: 100%;
+  transition: height 0.45s;
+  background-color: red;
+}
+
 #mobile-top {
   height: 120px;
+  background-color: #F8F8F8;
   background-image: url("../../../public/assests/images/mobile-top.webp");
   background-size: contain;
   background-position: right center;
   background-repeat: no-repeat;
+  position: fixed;
+  z-index: 9999;
+  top: 0;
+  width: 100%;
+  transition: top 2s;
 }
 #mobile-top .top-container {
   max-width: 1440px;
@@ -41,7 +261,7 @@
   margin-right: 20px;
 }
 #mobile-top .top-container .row .logo-side p {
-  font-size: 20px;
+  font-size: 18px;
 }
 #mobile-top .top-container .row .center-links {
   width: 420px;
@@ -59,17 +279,17 @@
 }
 #mobile-top .top-container .row .center-links ul li {
   width: 33.33%;
-  padding: 0 2px 0 14px;
   list-style: none;
   position: relative;
+  padding: 0 0 0 16px;
 }
 #mobile-top .top-container .row .center-links ul li::after {
   content: "";
   background-color: silver;
   height: 60%;
-  width: 2px;
+  width: 1px;
   position: absolute;
-  left: -2px;
+  left: -1px;
   top: 20%;
 }
 #mobile-top .top-container .row .center-links ul li a {
@@ -77,16 +297,16 @@
 }
 #mobile-top .top-container .row .center-links ul li a div {
   padding: 6px 0 6px 34px;
-  background-size: 32px;
+  background-size: 23px;
   background-position: left center;
   background-repeat: no-repeat;
 }
 #mobile-top .top-container .row .center-links ul li a div span {
-  font-size: 12px;
+  font-size: 10px;
   color: #000000;
 }
 #mobile-top .top-container .row .center-links ul li a div p {
-  font-size: 16px;
+  font-size: 14px;
   color: #000000;
 }
 #mobile-top .top-container .row .center-links ul li a .app-store {
@@ -103,4 +323,5 @@
   width: 52px;
   height: 52px;
   border-radius: 50%;
+  border: 1px solid rgba(0, 0, 0, 0.15);
 }/*# sourceMappingURL=home-styles.css.map */

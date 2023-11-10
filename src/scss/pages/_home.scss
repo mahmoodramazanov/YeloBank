@@ -1,7 +1,20 @@
+
+.fictive-mobile-top{
+  height: 120px;
+  width: 100%;
+  transition: height 0.45s;
+  background-color: red;
+}
 #mobile-top {
   height: 120px;
+  background-color: $light-silver;
   background-image: url("../../../public/assests/images/mobile-top.webp");
   @include bg-image(contain, right center, no-repeat);
+  position: fixed;
+  z-index: 9999;
+  top: 0;
+  width: 100%;
+  transition: top 2s;
   .top-container {
     max-width: $top-max-width;
     margin: auto;
@@ -25,7 +38,7 @@
           }
         }
         p {
-          font-size: 20px;
+          font-size: 18px;
         }
       }
       .center-links {
@@ -41,16 +54,16 @@
           @include flex($justify: space-between);
           li {
             width: 33.33%;
-            padding: 0 2px 0 14px;
             list-style: none;
             position: relative;
+            padding: 0 0 0 16px;
             &::after {
               content: "";
               background-color: silver;
               height: 60%;
-              width: 2px;
+              width: 1px;
               position: absolute;
-              left: -2px;
+              left: -1px;
               top: 20%;
             }
             a {
@@ -60,14 +73,14 @@
                 @include bg-image(
                   $position: left center,
                   $repeat: no-repeat,
-                  $size: 32px
+                  $size: 23px
                 );
                 span {
-                  font-size: 12px;
+                  font-size: 10px;
                   color: $black;
                 }
                 p {
-                  font-size: 16px;
+                  font-size: 14px;
                   color: $black;
                 }
               }
@@ -90,8 +103,10 @@
           width: 52px;
           height: 52px;
           border-radius: 50%;
+          border: 1px solid rgba(0, 0, 0, 0.15);
         }
       }
     }
   }
 }
+
