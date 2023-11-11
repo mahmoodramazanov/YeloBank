@@ -325,14 +325,53 @@ header .sect-container .header-bottom .inner-container .head-right button {
   border: 1px solid rgba(0, 0, 0, 0.15);
 }
 
+#slider-sctn {
+  height: 505px;
+}
+#slider-sctn .row {
+  height: 100%;
+}
+#slider-sctn .row .slider {
+  height: 100%;
+}
 #slider-sctn .row .slider .slide-dots {
   color: red;
 }
+#slider-sctn .row .slider .slide-items {
+  height: 100%;
+}
 #slider-sctn .row .slider .slide-items .slide-item {
-  max-width: 1440px;
-  margin: auto;
-  padding: 0 20px;
+  position: relative;
+  height: 100%;
+  background-color: #FFC82D;
 }
 #slider-sctn .row .slider .slide-items .slide-item .inner-container {
-  background-color: yellowgreen;
+  max-width: 1140px;
+  margin: auto;
+  padding: 0 20px;
+  height: 100%;
+}
+#slider-sctn .row .slider .slide-items .slide-item .right-bgimage {
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  width: 55%;
+  height: 100%;
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  -webkit-clip-path: polygon(38% 0, 20% 100%, 100% 100%, 100% 0);
+          clip-path: polygon(38% 0, 20% 100%, 100% 100%, 100% 0);
+}
+#slider-sctn .row .slider .slide-items .slide-1 .right-bgimage {
+  background-image: url("/public/assests/images/slide_1.png");
+}
+#slider-sctn .row .slider .slide-items .slide-2 .right-bgimage {
+  background-image: url("/public/assests/images/slide_2.webp");
+}
+#slider-sctn .row .slider .slide-items .slide-3 .right-bgimage {
+  background-image: url("/public/assests/images/slide_3.png");
+}
+#slider-sctn .row .slider .slide-items .slide-4 .right-bgimage {
+  background-image: url("/public/assests/images/slide_4.png");
 }/*# sourceMappingURL=home-styles.css.map */

@@ -110,18 +110,62 @@
 }
 
 #slider-sctn {
+  height: 505px;
   .row {
+    height: 100%;
     .slider {
+      height: 100%;
       .slide-dots {
         color: red;
       }
       .slide-items {
+        height: 100%;
         .slide-item {
-          max-width: $top-max-width;
-          margin: auto;
-          padding: 0 $gnrl-padding;
+          position: relative;
+          height: 100%;
+          background-color: $yellow;
           .inner-container {
-            background-color: yellowgreen;
+            max-width: $gnrl-max-width;
+            margin: auto;
+            padding: 0 $gnrl-padding;
+            height: 100%;
+          }
+          .right-bgimage {
+            @include bg-image(
+              $repeat: no-repeat,
+              $size: cover,
+              $position: center
+              
+            );
+            width: 55%;
+            height: 100%;
+            position: absolute;
+            right: 0;
+            bottom: 0;
+            // shape-outside: polygon(30% 0, 0 100%, 100% 100%, 100% 0);
+            // shape-margin: 20px;
+            clip-path: polygon(38% 0, 20% 100%, 100% 100%, 100% 0);
+          }
+        }
+        .slide-1 {
+          .right-bgimage {
+            background-image: url("/public/assests/images/slide_1.png");
+            
+          }
+        }
+        .slide-2{
+          .right-bgimage{
+            background-image: url('/public/assests/images/slide_2.webp');
+          }
+        }
+        .slide-3{
+          .right-bgimage{
+            background-image: url('/public/assests/images/slide_3.png');
+          }
+        }
+        .slide-4{
+          .right-bgimage{
+            background-image: url('/public/assests/images/slide_4.png');
           }
         }
       }
