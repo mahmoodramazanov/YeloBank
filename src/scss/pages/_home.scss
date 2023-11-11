@@ -1,5 +1,4 @@
-
-.fictive-mobile-top{
+.fictive-mobile-top {
   height: 120px;
   width: 100%;
   transition: height 0.45s;
@@ -110,3 +109,22 @@
   }
 }
 
+#slider-sctn {
+  .row {
+    .slider {
+      .slide-dots {
+        color: red;
+      }
+      .slide-items {
+        .slide-item {
+          max-width: $top-max-width;
+          margin: auto;
+          padding: 0 $gnrl-padding;
+          .inner-container {
+            background-color: yellowgreen;
+          }
+        }
+      }
+    }
+  }
+}
