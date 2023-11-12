@@ -8,9 +8,6 @@ body {
   font-family: "r", Arial, sans-serif;
 }
 
-header {
-  height: 45px;
-}
 header .sect-container .header-top {
   border-bottom: 1px solid rgba(0, 0, 0, 0.5);
 }
@@ -221,7 +218,7 @@ header .sect-container .header-bottom .inner-container .head-right button {
   height: 120px;
   background-color: #F8F8F8;
   background-image: url("../../../public/assests/images/mobile-top.webp");
-  background-size: contain;
+  background-size: 604px 120px;
   background-position: right center;
   background-repeat: no-repeat;
   position: fixed;
@@ -333,17 +330,45 @@ header .sect-container .header-bottom .inner-container .head-right button {
 }
 #slider-sctn .row .slider {
   height: 100%;
+  position: relative;
 }
 #slider-sctn .row .slider .slide-dots {
-  color: red;
+  width: 40%;
+  position: absolute;
+  bottom: 20px;
+  right: 0;
+}
+#slider-sctn .row .slider .slide-dots ul {
+  width: 100%;
+  background-color: rgb(0, 68, 255);
+  display: flex;
+  justify-content: center;
+}
+#slider-sctn .row .slider .slide-dots ul li {
+  list-style: none;
+  z-index: 300;
+  width: 8px;
+  height: 8px;
+  background: #000;
+  border-radius: 50%;
+  margin: 0 10px;
+}
+#slider-sctn .row .slider .slide-dots ul li:hover {
+  cursor: pointer;
 }
 #slider-sctn .row .slider .slide-items {
   height: 100%;
+  display: flex;
+  flex-direction: row;
+  overflow-x: scroll;
 }
 #slider-sctn .row .slider .slide-items .slide-item {
   position: relative;
   height: 100%;
+  width: 100%;
+  min-width: 100%;
   background-color: #FFC82D;
+  transition: 1s;
 }
 #slider-sctn .row .slider .slide-items .slide-item .inner-container {
   max-width: 1140px;
@@ -366,11 +391,20 @@ header .sect-container .header-bottom .inner-container .head-right button {
 #slider-sctn .row .slider .slide-items .slide-1 .right-bgimage {
   background-image: url("/public/assests/images/slide_1.png");
 }
+#slider-sctn .row .slider .slide-items .slide-2 {
+  background-color: red;
+}
 #slider-sctn .row .slider .slide-items .slide-2 .right-bgimage {
   background-image: url("/public/assests/images/slide_2.webp");
 }
+#slider-sctn .row .slider .slide-items .slide-3 {
+  background-color: green;
+}
 #slider-sctn .row .slider .slide-items .slide-3 .right-bgimage {
   background-image: url("/public/assests/images/slide_3.png");
+}
+#slider-sctn .row .slider .slide-items .slide-4 {
+  background-color: blueviolet;
 }
 #slider-sctn .row .slider .slide-items .slide-4 .right-bgimage {
   background-image: url("/public/assests/images/slide_4.png");

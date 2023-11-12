@@ -8,7 +8,7 @@
   height: 120px;
   background-color: $light-silver;
   background-image: url("../../../public/assests/images/mobile-top.webp");
-  @include bg-image(contain, right center, no-repeat);
+  @include bg-image(604px 120px, right center, no-repeat);
   position: fixed;
   z-index: 9999;
   top: 0;
@@ -115,15 +115,43 @@
     height: 100%;
     .slider {
       height: 100%;
+      position: relative;
       .slide-dots {
-        color: red;
+        width: 40%;
+        position: absolute;
+        bottom: 20px;
+        right: 0;
+        ul {
+          width: 100%;
+          background-color: rgb(0, 68, 255);
+          @include flex($justify: center);
+          li {
+            list-style: none;
+            z-index: 300;
+            width: 8px;
+            height: 8px;
+            background: #000;
+            border-radius: 50%;
+            margin: 0 10px;
+            &:hover {
+              cursor: pointer;
+            }
+          }
+        }
       }
       .slide-items {
         height: 100%;
+        @include flex($direction: row);
+        // display: flex;
+        overflow-x: scroll;
         .slide-item {
           position: relative;
           height: 100%;
+          width: 100%;
+          min-width: 100%;
           background-color: $yellow;
+          transition: 1s;
+          // transform: translateX(-100%);
           .inner-container {
             max-width: $gnrl-max-width;
             margin: auto;
@@ -135,7 +163,6 @@
               $repeat: no-repeat,
               $size: cover,
               $position: center
-              
             );
             width: 55%;
             height: 100%;
@@ -148,24 +175,27 @@
           }
         }
         .slide-1 {
+          // background-color: #000;
           .right-bgimage {
             background-image: url("/public/assests/images/slide_1.png");
-            
           }
         }
-        .slide-2{
-          .right-bgimage{
-            background-image: url('/public/assests/images/slide_2.webp');
+        .slide-2 {
+          background-color: red;
+          .right-bgimage {
+            background-image: url("/public/assests/images/slide_2.webp");
           }
         }
-        .slide-3{
-          .right-bgimage{
-            background-image: url('/public/assests/images/slide_3.png');
+        .slide-3 {
+          background-color: green;          
+          .right-bgimage {
+            background-image: url("/public/assests/images/slide_3.png");
           }
         }
-        .slide-4{
-          .right-bgimage{
-            background-image: url('/public/assests/images/slide_4.png');
+        .slide-4 {
+          background-color: blueviolet;
+          .right-bgimage {
+            background-image: url("/public/assests/images/slide_4.png");
           }
         }
       }
