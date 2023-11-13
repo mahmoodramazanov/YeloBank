@@ -36,28 +36,6 @@ const slider = document.querySelector(".slide-items");
 const slideItems = document.querySelectorAll(".slide-item");
 const slideDots = document.querySelectorAll(".slide-dot");
 
-/*
-slideItems.forEach((el, i)=> {
-              el.style.transform = `translateX(-${(100)}%)`;
-});
-slideDots.forEach((dot, index)=>{
-  dot.addEventListener('click',()=>{
-    if()
-  })
-});
-
-function toLeft(arr){
-  while (!arr[2].classList.contains('active-slide')){
-    const arr0 = arr[0];
-    for (let i=0; i<arr.length()-1; i++){
-      arr[i] =arr[i+1];
-      arr[arr.length()] = arr0;
-    }
-  };
-}
-*/
-// console.log(slideItems[0])
-
 function toLeft1(arr) {
   const arrtest = [];
   const arr0 = arr[0];
@@ -75,25 +53,56 @@ function writeInSlider(arr) {
   });
 }
 
-console.log(toLeft1(slideItems));
-writeInSlider(slideItems);
-
 // console.log(slideItems[0].outerHTML)
+let step = 0;
+setInterval(() => {
+  // const sIndex = (+el.dataset.slideindex + interval) % 4;
+  // if (sIndex == 4) sIndex = -1;
+  // slideItems[(4 + interval) % 4].style.zIndex = -1;
+  // slideItems[(4 + interval) % 4 - 1].style.zIndex = 0;
+  // el.style.transform = `translateX(${sIndex * 100}%)`;
+  switch (step) {
+    case 0:
+      slideItems[3].style.zIndex = "-1";
+      slideItems[2].style.zIndex = "1";
 
-let interval = 0;
+      slideItems[0].style.transform = "translateX(0)";
+      slideItems[1].style.transform = "translateX(100%)";
+      slideItems[2].style.transform = "translateX(200%)";
+      slideItems[3].style.transform = "translateX(-100%)";
+      break;
+    case 1:
+      slideItems[0].style.zIndex = "-1";
+      slideItems[3].style.zIndex = "1";
 
-// setInterval(() => {
-//   // const arr0 = slideItems[0];
-//   // for (let i=0; i<slideItems.length-1; i++){
-//   //   slideItems[i] =slideItems[i+1];
-//   //   slideItems[slideItems.length-1] = arr0;
-//   // }
-//   slideItems.forEach((el)=> {
-//     el.style.transform = `translateX(${((+el.dataset.slideindex+interval)%4)*100}%)`;
-//   });
-//   interval++;
-//   interval %= 4;
-// }, 200000);
+      slideItems[0].style.transform = "translateX(-100%)";
+      slideItems[1].style.transform = "translateX(0)";
+      slideItems[2].style.transform = "translateX(100%)";
+      slideItems[3].style.transform = "translateX(200%)";
+      break;
+    case 2:
+      slideItems[1].style.zIndex = "-1";
+      slideItems[0].style.zIndex = "1";
+
+      slideItems[0].style.transform = "translateX(200%)";
+      slideItems[1].style.transform = "translateX(-100%)";
+      slideItems[2].style.transform = "translateX(0)";
+      slideItems[3].style.transform = "translateX(100%)";
+      break;
+    case 3:
+      slideItems[2].style.zIndex = "-1";
+      slideItems[1].style.zIndex = "1";
+
+      slideItems[0].style.transform = "translateX(100%)";
+      slideItems[1].style.transform = "translateX(200%)";
+      slideItems[2].style.transform = "translateX(-100%)";
+      slideItems[3].style.transform = "translateX(0)";
+  }
+  step++;
+  step %= 4;
+}, 3  000);
+
+// el.style.transform = `translateX(${+el.dataset.slideindex * 100}%)`;
 
 //slider finished
 // HEADER FINISHED

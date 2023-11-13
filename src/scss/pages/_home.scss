@@ -145,57 +145,73 @@
         // display: flex;
         overflow-x: scroll;
         .slide-item {
-          position: relative;
+          position: absolute;
           height: 100%;
           width: 100%;
           min-width: 100%;
           background-color: $yellow;
           transition: 1s;
           // transform: translateX(-100%);
-          .inner-container {
-            max-width: $gnrl-max-width;
-            margin: auto;
-            padding: 0 $gnrl-padding;
+          .slide-content {
+            width: 100%;
             height: 100%;
-          }
-          .right-bgimage {
-            @include bg-image(
-              $repeat: no-repeat,
-              $size: cover,
-              $position: center
-            );
-            width: 55%;
-            height: 100%;
-            position: absolute;
-            right: 0;
-            bottom: 0;
-            // shape-outside: polygon(30% 0, 0 100%, 100% 100%, 100% 0);
-            // shape-margin: 20px;
-            clip-path: polygon(38% 0, 20% 100%, 100% 100%, 100% 0);
+            position: relative;
+            .inner-container {
+              max-width: $gnrl-max-width;
+              margin: auto;
+              padding: 0 $gnrl-padding;
+              height: 100%;
+              width: 100%;
+              height: 100%;
+              color: red;
+            }
+            .right-bgimage {
+              @include bg-image(
+                $repeat: no-repeat,
+                $size: cover,
+                $position: center
+              );
+              width: 55%;
+              height: 100%;
+              position: absolute;
+              right: 0;
+              bottom: 0;
+              // shape-outside: polygon(30% 0, 0 100%, 100% 100%, 100% 0);
+              // shape-margin: 20px;
+              clip-path: polygon(38% 0, 20% 100%, 100% 100%, 100% 0);
+            }
           }
         }
         .slide-1 {
           // background-color: #000;
-          .right-bgimage {
-            background-image: url("/public/assests/images/slide_1.png");
+          .slide-content{
+            .right-bgimage {
+              background-image: url("/public/assests/images/slide_1.png");
+            }
           }
         }
         .slide-2 {
           background-color: red;
-          .right-bgimage {
-            background-image: url("/public/assests/images/slide_2.webp");
+          .slide-content{
+            .right-bgimage {
+              background-image: url("/public/assests/images/slide_2.webp");
+            }
           }
         }
         .slide-3 {
-          background-color: green;          
-          .right-bgimage {
-            background-image: url("/public/assests/images/slide_3.png");
+          background-color: green;
+          .slide-content{
+            .right-bgimage {
+              background-image: url("/public/assests/images/slide_3.png");
+            }
           }
         }
         .slide-4 {
           background-color: blueviolet;
-          .right-bgimage {
-            background-image: url("/public/assests/images/slide_4.png");
+          .slide-content{
+            .right-bgimage {
+              background-image: url("/public/assests/images/slide_4.png");
+            }
           }
         }
       }

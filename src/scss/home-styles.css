@@ -363,20 +363,28 @@ header .sect-container .header-bottom .inner-container .head-right button {
   overflow-x: scroll;
 }
 #slider-sctn .row .slider .slide-items .slide-item {
-  position: relative;
+  position: absolute;
   height: 100%;
   width: 100%;
   min-width: 100%;
   background-color: #FFC82D;
   transition: 1s;
 }
-#slider-sctn .row .slider .slide-items .slide-item .inner-container {
+#slider-sctn .row .slider .slide-items .slide-item .slide-content {
+  width: 100%;
+  height: 100%;
+  position: relative;
+}
+#slider-sctn .row .slider .slide-items .slide-item .slide-content .inner-container {
   max-width: 1140px;
   margin: auto;
   padding: 0 20px;
   height: 100%;
+  width: 100%;
+  height: 100%;
+  color: red;
 }
-#slider-sctn .row .slider .slide-items .slide-item .right-bgimage {
+#slider-sctn .row .slider .slide-items .slide-item .slide-content .right-bgimage {
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -388,24 +396,24 @@ header .sect-container .header-bottom .inner-container .head-right button {
   -webkit-clip-path: polygon(38% 0, 20% 100%, 100% 100%, 100% 0);
           clip-path: polygon(38% 0, 20% 100%, 100% 100%, 100% 0);
 }
-#slider-sctn .row .slider .slide-items .slide-1 .right-bgimage {
+#slider-sctn .row .slider .slide-items .slide-1 .slide-content .right-bgimage {
   background-image: url("/public/assests/images/slide_1.png");
 }
 #slider-sctn .row .slider .slide-items .slide-2 {
   background-color: red;
 }
-#slider-sctn .row .slider .slide-items .slide-2 .right-bgimage {
+#slider-sctn .row .slider .slide-items .slide-2 .slide-content .right-bgimage {
   background-image: url("/public/assests/images/slide_2.webp");
 }
 #slider-sctn .row .slider .slide-items .slide-3 {
   background-color: green;
 }
-#slider-sctn .row .slider .slide-items .slide-3 .right-bgimage {
+#slider-sctn .row .slider .slide-items .slide-3 .slide-content .right-bgimage {
   background-image: url("/public/assests/images/slide_3.png");
 }
 #slider-sctn .row .slider .slide-items .slide-4 {
   background-color: blueviolet;
 }
-#slider-sctn .row .slider .slide-items .slide-4 .right-bgimage {
+#slider-sctn .row .slider .slide-items .slide-4 .slide-content .right-bgimage {
   background-image: url("/public/assests/images/slide_4.png");
 }/*# sourceMappingURL=home-styles.css.map */
